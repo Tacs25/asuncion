@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+html, body{
+    height: 100%;
+}
+#signup{
+    min-height: calc(100vh - 76px - 72px)
+    
+}
+
+
+

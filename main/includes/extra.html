@@ -1,0 +1,30 @@
+<!--
+$servername = 'localhost';
+$username = 'root';
+$password = '';
+$dbname = 'access';
+
+//create coonection
+$dbc = mysqli_connect($servername,$username,$password,$dbname);
+
+if (isset($_POST['patient_email_address'])){
+    $user=$_POST['patient_email_address'];
+    $password=$_POST['patient_password'];
+
+    $query ="select * from data where Email ='".$user."'AND Pass='".$password."'limit 1";
+    $result = mysqli_query($dbc,$query);
+
+    if(mysqli_num_rows($result)==1){
+        ?>
+        <script>
+      alert('Successfully Log In');
+      document.location='../patient/profile.php'
+    </script>
+        exit();
+    }
+    else {
+        echo "Error";
+        exit();
+    }
+}
+?>-->
